@@ -4,7 +4,8 @@ echo "--- Criando projeto laravel"
 # Criar variaves para senha mysql, nome do projeto, projeto laravel e git
 echo "--- Definir nome da pasta e nome do projeto laravel ---"
 PROJECTFOLDER='project'
-PROJECTNAME="dev"
+PROJECTNAME="web"
+PROJECTURL='laradev.com'
 SERVERADMIN="wesleysilva.ti@gmail.com"
 
 echo "--- criar pasta do projeto ---"
@@ -14,8 +15,8 @@ echo "--- arquivo host ---"
 VHOST=$(cat <<EOF
 <VirtualHost *:80>
     ServerAdmin ${SERVERADMIN}
-    ServerName  ${PROJECTNAME}.laravel.com
-    ServerAlias ${PROJECTNAME}.laravel.com
+    ServerName  ${PROJECTNAME}.${PROJECTURL}
+    ServerAlias ${PROJECTNAME}.${PROJECTURL}
     DocumentRoot "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}/public"
     <Directory "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}/public">
         AllowOverride All
@@ -37,7 +38,8 @@ echo "--- reiniciar mysql ---"
 sudo service mysql restart
 
 echo "-- gerar projeto laravel"
-composer create-project --prefer-dist laravel/laravel /var/www/html/${PROJECTFOLDER}/${PROJECTNAME}
+composer create-project --prefer-dist laravel/laravel /var/www/html/${PROJECTFOLDER}/${PROJECTNAME} "5.7.*" #gera a versao do laravel
+# composer create-project --prefer-dist laravel/laravel /var/www/html/${PROJECTFOLDER}/${PROJECTNAME}
 sudo chmod -R 777 /var/www/html/${PROJECTFOLDER}/
 
 echo "--- reiniciar apache ---"
