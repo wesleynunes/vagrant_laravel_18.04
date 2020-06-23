@@ -1,5 +1,5 @@
 #/usr/bin/env bash
-echo "--- Criando projeto laravel"
+echo "--- Criando projeto laravel escolhendo versao"
 
 # Criar variaves para senha mysql, nome do projeto, projeto laravel e git
 echo "--- Definir nome da pasta e nome do projeto laravel ---"

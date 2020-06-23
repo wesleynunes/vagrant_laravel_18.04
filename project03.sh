@@ -17,8 +17,8 @@ VHOST=$(cat <<EOF
     ServerAdmin ${SERVERADMIN}
     ServerName  ${PROJECTNAME}.${PROJECTURL}
     ServerAlias ${PROJECTNAME}.${PROJECTURL}
-    DocumentRoot "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}/public"
-    <Directory "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}/public">
+    DocumentRoot "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}"
+    <Directory "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}">
         AllowOverride All
         Require all granted
     </Directory>
@@ -41,7 +41,7 @@ sudo service mysql restart
 # composer create-project --prefer-dist laravel/laravel /var/www/html/${PROJECTFOLDER}/${PROJECTNAME}
 
 echo "-- gerar projeto php"
-sudo mkdir "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}/public"
+sudo mkdir "/var/www/html/${PROJECTFOLDER}/${PROJECTNAME}"
 
 echo "-- permissao na pasta do projetos"
 sudo chmod -R 777 /var/www/html/${PROJECTFOLDER}/
@@ -49,4 +49,4 @@ sudo chmod -R 777 /var/www/html/${PROJECTFOLDER}/
 echo "--- reiniciar apache ---"
 sudo service apache2 restart
     
-echo "[OK] --- Projeto laravel criado!!!---"
+echo "[OK] --- Projeto php criado!!!---"
