@@ -4,7 +4,7 @@ echo "--- Criando projeto laravel"
 # Criar variaves para senha mysql, nome do projeto, projeto laravel e git
 echo "--- Definir nome da pasta e nome do projeto laravel ---"
 PROJECTFOLDER='project'
-PROJECTNAME="prototipo"
+PROJECTNAME="pro"
 PROJECTURL='laradev.com'
 SERVERADMIN="wesleysilva.ti@gmail.com"
 

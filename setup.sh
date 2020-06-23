@@ -24,11 +24,9 @@ sudo apt-get -y install apache2
 sudo ufw allow “Apache Full”
 sudo systemctl status apache2
 
-
 echo "--- instalar php7 e extensoes"
 sudo apt-get -y install php libapache2-mod-php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mbstring 
 sudo apt-get -y install php-xml php-common php-cli php-intl php-bcmath php-imap php-soap php-tokenizer php-json  
-
 
 echo "--- instalar mysql e fornercer senha para o instalador -- "
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $PASSWORD"
