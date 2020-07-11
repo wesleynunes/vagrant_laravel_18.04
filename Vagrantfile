@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
     config.vm.network :private_network, ip: "192.168.33.90" 
     config.vm.synced_folder("./", "/var/www/html", :nfs => true)
     config.vm.provider "virtualbox" do |machine|
-    	machine.memory = 2024
+    	machine.memory = 3024
         machine.cpus = 2
     	machine.name = "laravelbionic"
     end
@@ -13,4 +13,8 @@ Vagrant.configure("2") do |config|
     # config.vm.provision :shell, path: "project02.sh"
     # config.vm.provision :shell, path: "project03.sh"
     # config.vm.provision :shell, path: "project04.sh"
+<<<<<<< HEAD
+=======
+    # config.vm.provision :shell, path: "project05.sh"
+>>>>>>> 27922e7cc4f79fcc52b932d9b54ee26902703451
 end

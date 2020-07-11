@@ -43,6 +43,6 @@ composer create-project --prefer-dist laravel/laravel /var/www/html/${PROJECTFOL
 sudo chmod -R 777 /var/www/html/${PROJECTFOLDER}/
 
 echo "--- reiniciar apache ---"
-sudo service apache2 restart
-    
+sudo service apache2 restart    
+
 echo "[OK] --- Projeto laravel criado!!! ---"
