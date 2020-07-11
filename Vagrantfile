@@ -8,8 +8,9 @@ Vagrant.configure("2") do |config|
         machine.cpus = 2
     	machine.name = "laravelbionic"
     end
-    config.vm.provision :shell, path: "setup.sh"
-    config.vm.provision :shell, path: "project01.sh"
-    config.vm.provision :shell, path: "project02.sh"
-    config.vm.provision :shell, path: "project03.sh"
+    # config.vm.provision :shell, path: "setup.sh"
+    # config.vm.provision :shell, path: "project01.sh"
+    # config.vm.provision :shell, path: "project02.sh"
+    # config.vm.provision :shell, path: "project03.sh"
+    # config.vm.provision :shell, path: "project04.sh"
 end
