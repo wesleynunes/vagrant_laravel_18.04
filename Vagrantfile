@@ -13,8 +13,5 @@ Vagrant.configure("2") do |config|
     # config.vm.provision :shell, path: "project02.sh"
     # config.vm.provision :shell, path: "project03.sh"
     # config.vm.provision :shell, path: "project04.sh"
-<<<<<<< HEAD
-=======
     # config.vm.provision :shell, path: "project05.sh"
->>>>>>> 27922e7cc4f79fcc52b932d9b54ee26902703451
 end
