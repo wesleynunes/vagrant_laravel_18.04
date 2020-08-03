@@ -11,6 +11,7 @@ SERVERADMIN="wesleysilva.ti@gmail.com"
 echo "--- criar pasta do projeto ---"
 sudo mkdir "/var/www/html/${PROJECTFOLDER}"
 
+
 echo "--- arquivo host ---"
 VHOST=$(cat <<EOF
 <VirtualHost *:80>
